@@ -4,6 +4,10 @@ provider "aws" {
 
 terraform {
   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.23.0"
+    }
     sysdig = {
       source = "sysdiglabs/sysdig"
       version = ">= 0.5.39"
