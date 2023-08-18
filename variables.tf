@@ -46,12 +46,12 @@ variable "nat_gateways_count" {
 
 # Sysdig Access key
 variable "access_key" {
-  default = "82e62c0e-8e2a-4e5c-986e-38cd116f3151"
+  default = ""
 }
 
 # Sysdig Secure API Token
 variable "secure_api_token" {
-  default = "01f0c6e7-010b-4cb2-a1e6-99cd40afa43e"
+  default = ""
 }
 
 # ご自身のSysdig SaaSリージョンの値を入力してください
