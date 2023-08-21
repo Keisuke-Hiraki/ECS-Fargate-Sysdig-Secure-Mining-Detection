@@ -3,7 +3,7 @@ module "fargate-orchestrator-agent" {
   version = "0.3.1"
 
   vpc_id           = aws_vpc.vpc.id
-  subnets          = aws_subnet.public.*.id
+  subnets          = aws_subnet.private.*.id
   access_key       = var.access_key
   collector_host = var.collector_url
   collector_port = 6443
@@ -12,7 +12,7 @@ module "fargate-orchestrator-agent" {
   agent_image      = "quay.io/sysdig/orchestrator-agent:latest"
 
   # True if the VPC uses an InternetGateway, false otherwise
-  assign_public_ip = true
+  assign_public_ip = false
 
   tags = {
     description    = "Sysdig Serverless Agent Orchestrator"
