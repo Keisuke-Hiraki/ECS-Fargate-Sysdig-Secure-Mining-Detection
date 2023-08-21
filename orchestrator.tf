@@ -12,7 +12,7 @@ module "fargate-orchestrator-agent" {
   agent_image      = "quay.io/sysdig/orchestrator-agent:latest"
 
   # True if the VPC uses an InternetGateway, false otherwise
-  assign_public_ip = true
+  assign_public_ip = false
 
   tags = {
     description    = "Sysdig Serverless Agent Orchestrator"

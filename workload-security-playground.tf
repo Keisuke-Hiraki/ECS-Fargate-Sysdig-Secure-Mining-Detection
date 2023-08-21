@@ -131,9 +131,9 @@ resource "aws_ecs_service" "service" {
   enable_execute_command = true
 
   network_configuration {
-    subnets          = aws_subnet.public.*.id
+    subnets          = aws_subnet.private.*.id
     security_groups  = [aws_security_group.security_group.id]
-    assign_public_ip = true
+    assign_public_ip = var.public_ip
   }
 }
 
@@ -147,7 +147,7 @@ resource "aws_security_group_rule" "security_playground_ingress_rule" {
   protocol          = "tcp"
   from_port         = 8080
   to_port           = 8080
-  cidr_blocks       = [var.source_ip]
+  cidr_blocks       = ["${aws_instance.bastion_ec2.private_ip}/32"]
   security_group_id = aws_security_group.security_group.id
 }
 

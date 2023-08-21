@@ -34,14 +34,19 @@ variable "cidr_private" {
   ]
 }
 
+# タスクにPublic IPをアサインするか否か。Private Subnetにデプロイする場合はfalseに設定してください
+variable "public_ip" {
+  default = "false"
+}
+
 # NatGatewayの作成有無
 variable "nat_gateway_create" {
-  default = "false"
+  default = "true"
 }
 
 # NatGatewayを作成する場合の台数
 variable "nat_gateways_count" {
-  default = 0
+  default = 1
 }
 
 # Sysdig Access key
@@ -62,10 +67,4 @@ variable "collector_url" {
 # ご自身のSysdig SaaSリージョンの値を入力してください
 variable "sysdig_secure_url" {
   default = "https://app.au1.sysdig.com"
-}
-
-# Curlコマンドを打って疑似アタックを実行する端末のIPアドレスを入力してください
-# このIPアドレスからWorkloadタスクに対する8080ポート接続を許可するSecurity Group設定を作成します
-variable "source_ip" {
-  default = "10.0.10.233/32"
 }
