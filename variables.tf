@@ -36,7 +36,7 @@ variable "cidr_private" {
 
 # タスクにPublic IPをアサインするか否か。Private Subnetにデプロイする場合はfalseに設定してください
 variable "public_ip" {
-  default = "false"
+  default = "true"
 }
 
 # NatGatewayの作成有無
@@ -49,22 +49,10 @@ variable "nat_gateways_count" {
   default = 1
 }
 
-# Sysdig Access key
-variable "access_key" {
-  default = ""
-}
+variable "access_key" {}
 
-# Sysdig Secure API Token
-variable "secure_api_token" {
-  default = ""
-}
+variable "secure_api_token" {}
 
-# ご自身のSysdig SaaSリージョンの値を入力してください
-variable "collector_url" {
-  default = "ingest.au1.sysdig.com"
-}
+variable "collector_url" {}
 
-# ご自身のSysdig SaaSリージョンの値を入力してください
-variable "sysdig_secure_url" {
-  default = "https://app.au1.sysdig.com"
-}
+variable "sysdig_secure_url" {}
