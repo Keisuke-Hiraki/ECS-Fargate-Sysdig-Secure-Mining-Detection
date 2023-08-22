@@ -67,9 +67,9 @@ sysdig_secure_url = "https://app.xxx.sysdig.com"
 ```
 
 各パラメータについては下記をご確認ください。
-`access_key` <a href="https://docs.sysdig.com/en/docs/administration/administration-settings/agent-access-keys/" rel="noopener" target="_blank">Agent Access Keys | Sysdig Docs</a>
-`secure_api_token` <a href="https://docs.sysdig.com/en/docs/administration/administration-settings/user-profile-and-password/retrieve-the-sysdig-api-token/" rel="noopener" target="_blank">Retrieve the Sysdig API Token | Sysdig Docs</a>
-`collector_url`と`sysdig_secure_url` <a href="https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/" rel="noopener" target="_blank">SaaS Regions and IP Ranges | Sysdig Docs</a>
+- `access_key` <a href="https://docs.sysdig.com/en/docs/administration/administration-settings/agent-access-keys/" rel="noopener" target="_blank">Agent Access Keys | Sysdig Docs</a>
+- `secure_api_token` <a href="https://docs.sysdig.com/en/docs/administration/administration-settings/user-profile-and-password/retrieve-the-sysdig-api-token/" rel="noopener" target="_blank">Retrieve the Sysdig API Token | Sysdig Docs</a>
+- `collector_url`と`sysdig_secure_url` <a href="https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/" rel="noopener" target="_blank">SaaS Regions and IP Ranges | Sysdig Docs</a>
 
 ### 削除
 ```bash
