@@ -18,8 +18,8 @@
 - EC2 Instance Connect Endpoint
 - Network Load Balancer
 - ECS Cluster
- - Sysidig Orchastrator Agent
- - Security Playground（擬似アタック被害コンテナ） + Sysdig Workload Agent
+  - Sysidig Orchastrator Agent
+  - Security Playground（擬似アタック被害コンテナ） + Sysdig Workload Agent
 
 ## 構成図
 
