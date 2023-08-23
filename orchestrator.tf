@@ -2,8 +2,8 @@ module "fargate-orchestrator-agent" {
   source  = "sysdiglabs/fargate-orchestrator-agent/aws"
   version = "0.3.1"
 
-  vpc_id           = aws_vpc.vpc.id
-  subnets          = [for s in "${var.public_ip == "true" ? aws_subnet.public.*.id : aws_subnet.private.*.id }" : s]
+  vpc_id           = module.vpc.vpc_id
+  subnets          = var.public_ip ? module.vpc.public_subnets : module.vpc.private_subnets
   access_key       = var.access_key
   collector_host = var.collector_url
   collector_port = 6443

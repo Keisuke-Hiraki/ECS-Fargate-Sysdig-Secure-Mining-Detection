@@ -5,7 +5,7 @@ data "aws_ssm_parameter" "amzn2023_ami" {
 resource "aws_security_group" "ec2_sg" {
   name        = "${var.system}-${var.env}-ec2-sg"
   description = "Allow HTTP inbound traffic"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = module.vpc.vpc_id
   ingress {
     from_port   = 22
     to_port     = 22
@@ -32,7 +32,7 @@ resource "aws_instance" "bastion_ec2" {
   vpc_security_group_ids = [
     "${aws_security_group.ec2_sg.id}"
   ]
-  subnet_id     = aws_subnet.private[0].id
+  subnet_id     = element(module.vpc.private_subnets, 0)
   tags = {
     Name = "${var.system}-${var.env}-ec2-bastion"
   }
@@ -41,7 +41,7 @@ resource "aws_instance" "bastion_ec2" {
 resource "aws_security_group" "eic_sg" {
     name        = "${var.system}-${var.env}-eic-sg"
     description = "EIC Security Group"
-    vpc_id            = aws_vpc.vpc.id
+    vpc_id            = module.vpc.vpc_id
 }
 
 resource "aws_security_group_rule" "eic_sg_rule" {
@@ -57,7 +57,7 @@ resource "aws_security_group_rule" "eic_sg_rule" {
 }
 
 resource "aws_ec2_instance_connect_endpoint" "eic" {
-    subnet_id = aws_subnet.private[0].id
+    subnet_id = element(module.vpc.private_subnets, 0)
     security_group_ids = [aws_security_group.eic_sg.id]
     preserve_client_ip = true
     tags = {

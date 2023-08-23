@@ -131,7 +131,7 @@ resource "aws_ecs_service" "service" {
   enable_execute_command = true
 
   network_configuration {
-    subnets          = [for s in aws_subnet.private.*.id : s]
+    subnets          = module.vpc.private_subnets
     security_groups  = [aws_security_group.security_group.id]
     assign_public_ip = var.public_ip
   }
@@ -139,7 +139,7 @@ resource "aws_ecs_service" "service" {
 
 resource "aws_security_group" "security_group" {
   description = "test only"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = module.vpc.vpc_id
 }
 
 resource "aws_security_group_rule" "security_playground_ingress_rule" {

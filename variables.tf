@@ -44,9 +44,9 @@ variable "nat_gateway_create" {
   default = "true"
 }
 
-# NatGatewayを作成する場合の台数
-variable "nat_gateways_count" {
-  default = 1
+# NatGatewayをシングル構成で作成するかどうか
+variable "single_nat_gateways" {
+  default = "true"
 }
 
 variable "access_key" {}
