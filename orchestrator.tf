@@ -3,7 +3,7 @@ module "fargate-orchestrator-agent" {
   version = "0.3.1"
 
   vpc_id           = aws_vpc.vpc.id
-  subnets          = "${var.public_ip == "true" ? [aws_subnet.public.*.id] : [aws_subnet.private.*.id] }"
+  subnets          = [for s in "${var.public_ip == "true" ? aws_subnet.public.*.id : aws_subnet.private.*.id }" : s]
   access_key       = var.access_key
   collector_host = var.collector_url
   collector_port = 6443

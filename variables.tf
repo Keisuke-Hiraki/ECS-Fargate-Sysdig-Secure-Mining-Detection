@@ -36,7 +36,7 @@ variable "cidr_private" {
 
 # タスクにPublic IPをアサインするか否か。Private Subnetにデプロイする場合はfalseに設定してください
 variable "public_ip" {
-  default = "true"
+  default = "false"
 }
 
 # NatGatewayの作成有無
