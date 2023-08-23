@@ -72,6 +72,17 @@ sysdig_secure_url = "https://app.xxx.sysdig.com"
 - `collector_url`と`sysdig_secure_url` <a href="https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/" rel="noopener" target="_blank">SaaS Regions and IP Ranges | Sysdig Docs</a>
 
 ### 削除
+
+```bash
+terraform destroy \
+-var 'access_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' \
+-var 'secure_api_token=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' \
+-var 'collector_url=ingest.xxx.sysdig.com' \
+-var 'sysdig_secure_url=https://app.xxx.sysdig.com' 
+```
+
+terraform.tfvarファイルを作成していた場合は、
+
 ```bash
 terraform destroy
 ```
