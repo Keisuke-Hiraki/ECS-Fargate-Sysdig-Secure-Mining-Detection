@@ -71,8 +71,10 @@ sysdig_secure_url = "https://xxx.xxx.sysdig.com"
 - `secure_api_token` <a href="https://docs.sysdig.com/en/docs/administration/administration-settings/user-profile-and-password/retrieve-the-sysdig-api-token/" rel="noopener" target="_blank">Retrieve the Sysdig API Token | Sysdig Docs</a>
 - `collector_url`と`sysdig_secure_url` <a href="https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/" rel="noopener" target="_blank">SaaS Regions and IP Ranges | Sysdig Docs</a>
 
-Ex.） US West (Oregon) の場合  
-`collector_url` は "ingest-us2.app.sysdig.com"  
+Ex.） US West (Oregon) の場合
+
+`collector_url` は "ingest-us2.app.sysdig.com"
+
 `sysdig_secure_url` は "https://us2.app.sysdig.com"
 
 ### 削除
