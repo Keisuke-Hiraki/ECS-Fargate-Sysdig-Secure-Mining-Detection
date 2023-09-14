@@ -73,9 +73,9 @@ sysdig_secure_url = "https://xxx.xxx.sysdig.com"
 
 Ex.） US West (Oregon) の場合
 
-`collector_url` は "ingest-us2.app.sysdig.com"
+`collector_url` は `ingest-us2.app.sysdig.com`
 
-`sysdig_secure_url` は "https://us2.app.sysdig.com"
+`sysdig_secure_url` は `https://us2.app.sysdig.com`
 
 ### 削除
 
