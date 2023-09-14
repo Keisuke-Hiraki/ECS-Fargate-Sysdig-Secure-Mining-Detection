@@ -63,7 +63,7 @@ secure_api_token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 collector_url = "ingest.xxx.sysdig.com"
 
 # ご自身のSysdig SaaSリージョンの値
-sysdig_secure_url = "https://app.xxx.sysdig.com"
+sysdig_secure_url = "https://xxx.xxx.sysdig.com"
 ```
 
 各パラメータについては下記をご確認ください。
@@ -78,7 +78,7 @@ terraform destroy \
 -var 'access_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' \
 -var 'secure_api_token=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' \
 -var 'collector_url=ingest.xxx.sysdig.com' \
--var 'sysdig_secure_url=https://app.xxx.sysdig.com' 
+-var 'sysdig_secure_url=https://xxx.xxx.sysdig.com' 
 ```
 
 terraform.tfvarファイルを作成していた場合は、
