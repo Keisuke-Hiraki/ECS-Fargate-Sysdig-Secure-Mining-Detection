@@ -52,8 +52,8 @@ terraform apply \
 -var 'sysdig_secure_url=https://xxx.xxx.sysdig.com' 
 ```
 
-また、terraform.tfvarファイルを使用する場合は、まずファイルを下記のように作成してください。
-```bash:terraform.tfvar
+また、terraform.tfvarsファイルを使用する場合は、まずファイルを下記のように作成してください。
+```bash:terraform.tfvars
 # Sysdig Access key
 access_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
@@ -67,7 +67,7 @@ collector_url = "xxx.xxx.sysdig.com"
 sysdig_secure_url = "https://xxx.xxx.sysdig.com"
 ```
 
-続いて、terraform.tfvarファイルを作成した場合のコマンドは下記です。
+続いて、terraform.tfvarsファイルを作成した場合のコマンドは下記です。
 ```bash
 terraform apply -var-file terraform.tfvars
 ```
@@ -93,8 +93,8 @@ terraform destroy \
 -var 'sysdig_secure_url=https://xxx.xxx.sysdig.com' 
 ```
 
-terraform.tfvarファイルを作成していた場合は、
+terraform.tfvarsファイルを作成していた場合は、
 
 ```bash
-terraform destroy
+terraform destroy -var-file terraform.tfvars
 ```
