@@ -43,6 +43,7 @@ terraform init
 
 ### 作成
 
+-varオプションに引数を渡す場合のコマンドは下記です。
 ```bash
 terraform apply \
 -var 'access_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' \
@@ -51,7 +52,7 @@ terraform apply \
 -var 'sysdig_secure_url=https://xxx.xxx.sysdig.com' 
 ```
 
-またはterraform.tfvarファイルを作成してください。
+また、terraform.tfvarファイルを使用する場合は、まずファイルを下記のように作成してください。
 ```bash:terraform.tfvar
 # Sysdig Access key
 access_key = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -64,6 +65,11 @@ collector_url = "xxx.xxx.sysdig.com"
 
 # ご自身のSysdig SaaSリージョンの値
 sysdig_secure_url = "https://xxx.xxx.sysdig.com"
+```
+
+続いて、terraform.tfvarファイルを作成した場合のコマンドは下記です。
+```bash
+terraform apply -var-file terraform.tfvars
 ```
 
 各パラメータについては下記をご確認ください。
