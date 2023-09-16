@@ -23,11 +23,11 @@
 
 ## 構成図
 
-<img src="/image/SysdigSecure-Fargate.png">
+<img src="/image/SysdigSecure-Fargate_re.png">
 
 ## 通信要件
 
-<img src="/image/SysdigSecure-Fargate-Network.png">
+<img src="/image/SysdigSecure-Fargate_Network.png">
 
 ## セットアップ手順
 
